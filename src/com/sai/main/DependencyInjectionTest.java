@@ -13,7 +13,7 @@ public class DependencyInjectionTest
 		AnnotationConfigApplicationContext ctx = 
 				new AnnotationConfigApplicationContext(AppConfiguration.class); //IOC created
 			
-		WeekDayFinder week =(WeekDayFinder)ctx.getBean("wdf");
+		WeekDayFinder week =ctx.getBean("wdf",WeekDayFinder.class);
 		String result=	week.findDayOnAWeek("sai");
 		System.out.println(result);
 		ctx.close();
