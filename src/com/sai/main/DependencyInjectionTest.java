@@ -16,6 +16,10 @@ public class DependencyInjectionTest
 		WeekDayFinder week =ctx.getBean("wdf",WeekDayFinder.class);
 		String result=	week.findDayOnAWeek("sai");
 		System.out.println(result);
+		System.out.println("---------------------------------");
+		
+		
+		
 		ctx.close();
 		System.out.println("DependencyInjectionTest.main()");
 	}
